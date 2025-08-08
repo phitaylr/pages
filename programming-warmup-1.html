@@ -3,7 +3,7 @@
 <head>
 <title>programming waarmup 1</title>
 <style>
-  body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+  body { font-family: sans-serif; text-align: left; margin-top: 50px; }
   h1 { color: #333; }
   p { font-size: 1.2em; color: #555; }
 </style>
@@ -17,16 +17,17 @@
   <script>
     // Function to generate a random number between 1 and 100
     function generateCode() {
-      const randomNumber1 = Math.floor(Math.random() * 400) + 200;
-      const randomNumber2 = Math.floor(Math.random() * 300) + 150;
-            const randomNumber3= Math.floor(Math.random() * 400) ;
-      const randomNumber4 = Math.floor(Math.random() * 300) ;
-            const randomNumber5 = Math.floor(Math.random() * 400);
-      const randomNumber6 = Math.floor(Math.random() * 300);
+      const randomNumber1 = Math.floor(Math.random() * 40) * 10 + 200;
+      const randomNumber2 = Math.floor(Math.random() * 30) * 10 + 150;
+      const randomNumber3= Math.floor(Math.random() * 40) *10 ;
+      const randomNumber4 = Math.floor(Math.random() * 30) *10 ;
+      const randomNumber5 = Math.floor(Math.random() * 40) *10;
+      const randomNumber6 = Math.floor(Math.random() * 30) *10;
+       const randomNumber7 = Math.floor(Math.random() * 40) + 2;
       var code = "size(" + randomNumber1 + ", " + randomNumber2 + ");\n"
        code += "line(" + randomNumber3 + ", " + randomNumber4 +", " + randomNumber5 + ", " + randomNumber6 + ");\n";
-
-
+      code += "strokeWeight("+randomNumber7+");\n";
+code += "point(" + randomNumber3 + ", " + randomNumber4 +");\n"
       
       document.getElementById('code').innerText = code;
     }
