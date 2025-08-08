@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Content</title>
+<style>
+  body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+  h1 { color: #333; }
+  p { font-size: 1.2em; color: #555; }
+</style>
+</head>
+<body>
+
+  <h1>Dynamic Content Example</h1>
+  <p>Loading a new value every time!</p>
+  <p id="randomNumberDisplay"></p>
+  <p id="randomQuoteDisplay"></p>
+
+  <script>
+    // Function to generate a random number between 1 and 100
+    function generateRandomNumber() {
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      document.getElementById('randomNumberDisplay').innerText = "Your lucky number is: " + randomNumber;
+    }
+
+    // Function to display a random quote from a predefined list
+    function displayRandomQuote() {
+      const quotes = [
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "Imagination is more important than knowledge. - Albert Einstein",
+        "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+        "The best way to predict the future is to invent it. - Alan Kay"
+      ];
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('randomQuoteDisplay').innerText = quotes[randomIndex];
+    }
+
+    // Call the functions when the page loads
+    window.onload = function() {
+      generateRandomNumber();
+      displayRandomQuote();
+    };
+  </script>
+
+</body>
+</html>
