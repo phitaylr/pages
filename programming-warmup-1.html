@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dynamic Content</title>
+<title>programming waarmup 1</title>
 <style>
   body { font-family: sans-serif; text-align: center; margin-top: 50px; }
   h1 { color: #333; }
@@ -19,7 +19,16 @@
     function generateCode() {
       const randomNumber1 = Math.floor(Math.random() * 400) + 200;
       const randomNumber2 = Math.floor(Math.random() * 300) + 150;
-      document.getElementById('size').innerText = "size(" + randomNumber1 + ", " + randomNumber2 + ");";
+            const randomNumber3= Math.floor(Math.random() * 400) ;
+      const randomNumber4 = Math.floor(Math.random() * 300) ;
+            const randomNumber5 = Math.floor(Math.random() * 400);
+      const randomNumber6 = Math.floor(Math.random() * 300);
+      var code = "size(" + randomNumber1 + ", " + randomNumber2 + ");<br>"
+       code += "line(" + randomNumber3 + ", " + randomNumber4 +", " + randomNumber5 + ", " + randomNumber6 + ");<br>";
+
+
+      
+      document.getElementById('size').innerText = code;
     }
 
  
