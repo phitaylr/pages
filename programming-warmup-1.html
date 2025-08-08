@@ -11,19 +11,22 @@
 <body>
 
   <h1>Intro to Programming Warmup 1</h1>
-  <p id="randomNumberDisplay"></p>
+  <p id="code"></p>
 
 
   <script>
     // Function to generate a random number between 1 and 100
-    function generateRandomNumber() {
-      const randomNumber = Math.floor(Math.random() * 100) + 1;
-      document.getElementById('randomNumberDisplay').innerText = "" + randomNumber;
+    function generateCode() {
+      const randomNumber1 = Math.floor(Math.random() * 400) + 200;
+      const randomNumber2 = Math.floor(Math.random() * 300) + 150;
+      document.getElementById('size').innerText = "size(" + randomNumber1 + ", " + randomNumber2 + ");";
     }
+
+ 
 
     // Call the functions when the page loads
     window.onload = function() {
-      displayRandomQuote();
+      generateCode();
     };
   </script>
 
